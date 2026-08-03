@@ -1,6 +1,9 @@
 // === BOT DASHBOARD ===
 
+const _BOT_OWNER_UID = 'qsgyQc6CKQbvq039mCHU41lIOsr2';
+
 function openBotDashboard() {
+  if (!currentUser || currentUser.uid !== _BOT_OWNER_UID) return;
   document.getElementById('bot-modal').style.display = 'block';
   document.body.style.overflow = 'hidden';
   renderBotHome();
